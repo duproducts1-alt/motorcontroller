@@ -20,7 +20,7 @@ jobs:
         release: '13.2.Rel1'
 
     - name: Build motorconfig firmware
-      working-directory: firmware/motorconfig
+      working-directory: Debug
       run: make -j$(nproc)
 
     - name: Upload firmware artifacts
@@ -28,6 +28,6 @@ jobs:
       with:
         name: motorconfig-firmware
         path: |
-          firmware/motorconfig/*.elf
-          firmware/motorconfig/*.bin
-          firmware/motorconfig/*.hex
+          Debug/*.elf
+          Debug/*.bin
+          Debug/*.hex
