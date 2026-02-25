@@ -1,1 +1,28 @@
-<content of .cproject file>
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Motor Controller</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.core.renderer.gnuMakeBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.core.resources.coreNature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+	</natures>
+	<resourceConfigurations>
+	</resourceConfigurations>
+	<projects>
+		<project>
+			<buildPath>
+				<entry kind="src" path="firmware/motorconfig"/>
+			</buildPath>
+		</project>
+	</projects>
+</projectDescription>
