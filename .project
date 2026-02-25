@@ -31,9 +31,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>claudeesc.ioc</name>
+			<name>newfirmwareandmx.ioc</name>
 			<type>1</type>
-			<locationURI>PROJECT_LOC/claudeesc.ioc</locationURI>
+			<locationURI>PROJECT_LOC/newfirmwareandmx.ioc</locationURI>
 		</link>
 		<link>
 			<name>Application/User/aspep.c</name>

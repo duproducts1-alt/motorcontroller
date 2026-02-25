@@ -23,20 +23,27 @@ The repository already contains STM32CubeIDE project files (`.project` / `.cproj
 1. **Install STM32CubeIDE** (free, Windows/macOS/Linux):
    https://www.st.com/en/development-tools/stm32cubeide.html
 
-2. **Open the project**:
-   - Launch STM32CubeIDE.
+2. **Clone the repo** (if you haven't already):
+   ```
+   git clone https://github.com/duproducts1-alt/motorcontroller.git
+   ```
+   > **Tip — where is `main.c`?**  
+   > After cloning, your source files are in the **`Src/`** folder — e.g. `Src/main.c`, `Src/mc_tasks.c`, etc.  
+   > Inside STM32CubeIDE's **Project Explorer** those same files appear under **`Application/User/`** (they are linked resources pointing to the `Src/` folder on disk). Either location opens the same file.
+
+3. **Open the project in STM32CubeIDE**:
    - Go to **File → Open Projects from File System…**
-   - Click **Directory…** and select the root of this cloned repository.
+   - Click **Directory…** and select the root of the cloned repository.
    - The project `claudeesc` will appear — make sure it is ticked, then click **Finish**.
 
-3. **Connect the board**:
+4. **Connect the board**:
    - Plug the B-G431B-ESC1 into your PC with a USB-C cable (the port next to the ST-Link LED). No external programmer is needed.
 
-4. **Build and flash**:
+5. **Build and flash**:
    - Click the green **Run ▶** button (or press **F11** for debug mode).
    - STM32CubeIDE will compile the firmware, flash it over the built-in ST-Link, and reset the board automatically.
 
-5. **Run the motor**:
+6. **Run the motor**:
    - Supply 8–28 V DC to the motor power connector (observe polarity).
    - Press the on-board user button to start the motor; press it again to stop.
    - To tune PID gains or monitor real-time telemetry, connect [ST Motor Control Workbench](https://www.st.com/en/embedded-software/x-cube-mcsdk.html) via the same USB-C cable (USART2, **1 843 200 baud**).
