@@ -18,6 +18,8 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include <stdio.h>
+
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -64,6 +66,12 @@ DMA_HandleTypeDef hdma_usart2_tx;
 
 /* USER CODE BEGIN PV */
 
+
+
+int fputc(int ch, FILE *f) {
+    HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+    return ch;
+}
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -97,29 +105,28 @@ static void MX_NVIC_Init(void);
   * @brief  The application entry point.
   * @retval int
   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
-
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
- // HAL_Init();
-
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
+  HAL_Init();
   SystemClock_Config();
 
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_ADC1_Init();
@@ -134,74 +141,37 @@ int main(void)
   MX_OPAMP3_Init();
   MX_TIM1_Init();
   MX_USART2_UART_Init();
+  
+  HAL_Delay(1000);
+
+  uint8_t msg1[] = "Starting motor control\r\n";
+  HAL_UART_Transmit(&huart2, msg1, 24, HAL_MAX_DELAY);
+
+  /* Initialize interrupts FIRST */
+  MX_NVIC_Init();
+
+  uint8_t msg_nvic[] = "NVIC initialized\r\n";
+  HAL_UART_Transmit(&huart2, msg_nvic, 18, HAL_MAX_DELAY);
+
   MX_MotorControl_Init();
-  MX_USART1_UART_Init();
 
-  /* Initialize interrupts */
-  MX_NVIC_Init();
-  /* USER CODE BEGIN 2 */
-  /* Initialize interrupts */
-  MX_NVIC_Init();
-  /* USER CODE BEGIN 2 */
-  // Add this after MX_MotorControl_Init() in main() - around line 135
-  // Initialize and start ONCE before the loop
-  HAL_Delay(1000);  // Give motor 1 second to initialize
-  MCI_StartMotor(pMCI[0]);
-  HAL_Delay(500);   // Another delay
+  /* DO NOT USE HAL_Delay() or UART after this point - SysTick is reconfigured */
 
-  // THEN ramp
- // MCI_ExecSpeedRamp_F(pMCI[0], 125.0f, 1000);
-  MCI_ExecSpeedRamp_F(pMCI[0], 125.0f, 5000);  // 125 RPM in 5 seconds (much slower!)
-
-  //while (1) {
-      // ... rest of your loop
- // }
-  /* USER CODE BEGIN 2 */
-
-  // Start the ramp ONCE before the loop
-  //MCI_ExecSpeedRamp_F(pMCI[0], 125.0f, 1000);  // Set target speed: 125 RPM over 1 second
-  //MCI_StartMotor(pMCI[0]);  // Start it ONCE
-
-  while (1)
-  {
-      /* USER CODE BEGIN 3 */
-
-      // Get current motor state
-      MCI_State_t state = MCI_GetSTMState(pMCI[0]);
-
-      // Print state for debugging
-      if (state == RUN) {
-        float speed = MCI_GetAvrgMecSpeed_F(pMCI[0]);
-        printf("Motor running at %.1f RPM\r\n", speed);
-      }
-      else if (state == FAULT_NOW) {
-        printf("Motor FAULT!\r\n");
-      }
-      else if (state == IDLE) {
-        printf("Motor IDLE\r\n");
-      }
-
-      HAL_Delay(500);  // Update every 500ms
-
-      /* USER CODE END 3 */
+  if (pMCI[0] != NULL) {
+    MCI_StartMotor(pMCI[0]);
   }
 
-
-
-
-
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
+  while(1)
   {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
+    /* Just loop - motor is controlled by SysTick interrupt */
   }
-  /* USER CODE END 3 */
+
+  return 0;
 }
+
+
+
+
 
 /**
   * @brief System Clock Configuration
