@@ -132,10 +132,10 @@ int main(void)
   MX_OPAMP3_Init();
   MX_TIM1_Init();
   MX_USART2_UART_Init();
-  MX_MotorControl_Init();
 
   /* Initialize interrupts */
   MX_NVIC_Init();
+  MX_MotorControl_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
