@@ -9,9 +9,145 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include motorcontroller_fresh/claudeesc/Src/subdir.mk
+-include motorcontroller_fresh/claudeesc/STM32CubeIDE/Application/User/subdir.mk
+-include motorcontroller_fresh/claudeesc/STM32CubeIDE/Application/Startup/subdir.mk
+-include motorcontroller_fresh/claudeesc/MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/G4xx/Src/subdir.mk
+-include motorcontroller_fresh/claudeesc/MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/Any/Src/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/STM32G4xx_HAL_Driver/Src/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/RTOS2/Template/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/RTOS2/Source/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Source/SoftmaxFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Source/PoolingFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Source/NNSupportFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Source/FullyConnectedFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Source/ConvolutionFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Source/ActivationFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/Ref_Implementations/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/STM32F411RETx/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM4/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/gru/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/gru/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/gru/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/gru/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/Device/ST/STM32G4xx/Source/Templates/iar/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/Device/ST/STM32G4xx/Source/Templates/gcc/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/Device/ST/STM32G4xx/Source/Templates/arm/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/Device/ST/STM32G4xx/Source/Templates/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Source/TransformFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Source/SupportFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Source/StatisticsFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Source/MatrixFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Source/FilteringFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Source/FastMathFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Source/ControllerFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Source/ComplexMathFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Source/CommonTables/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Source/BasicMathFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/PythonWrapper/cmsisdsp_pkg/src/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/RTE/Device/ARMCM7_SP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/RTE/Device/ARMCM4_FP/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/RTE/Device/ARMCM3/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/RTE/Device/ARMCM0/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/TransformFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/SupportFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/StatisticsFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/MatrixFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/Intrinsics/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/HelperFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/FilteringFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/FastMathFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/ControllerFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/ComplexMathFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/RefLibs/src/BasicMathFunctions/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/DspLibTest_FVP_A5/RTE/Device/ARMCA5/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/DspLibTest_FVP_A5/RTE/CMSIS/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/DspLibTest_FVP_A5/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/transform_tests/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/support_tests/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/statistics_tests/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/matrix_tests/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/intrinsics_tests/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/filtering_tests/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/fast_math_tests/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/controller_tests/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/complex_math_tests/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/basic_math_tests/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/src/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/GCC/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/ARMCLANG/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/ARMCC/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/JTest/src/subdir.mk
+-include motorcontroller_fresh/claudeesc/Drivers/CMSIS/Core/Template/ARMv8-M/subdir.mk
 -include Startup/subdir.mk
 -include Src/subdir.mk
+-include Middlewares/MotorControl/subdir.mk
+-include MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/G4xx/Src/subdir.mk
+-include MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/Any/Src/subdir.mk
 -include Drivers/STM32G4xx_HAL_Driver/Src/subdir.mk
+-include Drivers/STM32G4xx_HAL_Driver/subdir.mk
+-include Drivers/CMSIS/subdir.mk
+-include Application/User/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -34,34 +170,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := newfirmwareandmx
+BUILD_ARTIFACT_NAME := claudeesc
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-newfirmwareandmx.elf \
+claudeesc.elf \
 
 MAP_FILES += \
-newfirmwareandmx.map \
+claudeesc.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-newfirmwareandmx.list \
+claudeesc.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: newfirmwareandmx.elf secondary-outputs
+main-build: claudeesc.elf secondary-outputs
 
 # Tool invocations
-newfirmwareandmx.elf newfirmwareandmx.map: $(OBJS) $(USER_OBJS) C:\Users\Sean\.st_workbench\projects\newfirmwareandmx\STM32G431CBUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "newfirmwareandmx.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Sean\.st_workbench\projects\newfirmwareandmx\STM32G431CBUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="newfirmwareandmx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+claudeesc.elf claudeesc.map: $(OBJS) $(USER_OBJS) C:\Users\Sean\motorcontroller\STM32G431CBUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "claudeesc.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Sean\motorcontroller\STM32G431CBUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="claudeesc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +206,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-newfirmwareandmx.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "newfirmwareandmx.list"
+claudeesc.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "claudeesc.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) default.size.stdout newfirmwareandmx.elf newfirmwareandmx.list newfirmwareandmx.map
+	-$(RM) claudeesc.elf claudeesc.list claudeesc.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

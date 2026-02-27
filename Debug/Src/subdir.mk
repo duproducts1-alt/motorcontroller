@@ -5,34 +5,8 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/aspep.c \
-../Src/main.c \
-../Src/mc_api.c \
-../Src/mc_app_hooks.c \
-../Src/mc_config.c \
-../Src/mc_config_common.c \
-../Src/mc_configuration_registers.c \
-../Src/mc_interface.c \
-../Src/mc_math.c \
-../Src/mc_parameters.c \
-../Src/mc_perf.c \
-../Src/mc_tasks.c \
-../Src/mc_tasks_foc.c \
-../Src/mcp.c \
-../Src/mcp_config.c \
-../Src/motorcontrol.c \
-../Src/pwm_common.c \
-../Src/pwm_curr_fdbk.c \
-../Src/register_interface.c \
-../Src/regular_conversion_manager.c \
-../Src/stm32_mc_common_it.c \
-../Src/stm32g4xx_hal_msp.c \
-../Src/stm32g4xx_it.c \
-../Src/stm32g4xx_mc_it.c \
 ../Src/syscalls.c \
-../Src/sysmem.c \
-../Src/system_stm32g4xx.c \
-../Src/usart_aspep_driver.c 
+../Src/sysmem.c 
 
 OBJS += \
 ./Src/aspep.o \
@@ -97,7 +71,7 @@ C_DEPS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/Any/Inc -I../MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/G4xx/Inc -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -Ofast -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
+	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/Any/Inc -I../MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/G4xx/Inc -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I../Drivers/CMSIS/DSP/Include -Ofast -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
 clean: clean-Src
 

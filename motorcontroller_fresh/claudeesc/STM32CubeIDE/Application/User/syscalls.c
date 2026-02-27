@@ -31,6 +31,9 @@
 #include <sys/times.h>
 
 
+
+
+
 /* Variables */
 extern int __io_putchar(int ch) __attribute__((weak));
 extern int __io_getchar(void) __attribute__((weak));
@@ -76,6 +79,8 @@ __attribute__((weak)) int _read(int file, char *ptr, int len)
 
   return len;
 }
+
+
 
 __attribute__((weak)) int _write(int file, char *ptr, int len)
 {
@@ -174,3 +179,5 @@ int _execve(char *name, char **argv, char **env)
   errno = ENOMEM;
   return -1;
 }
+
+

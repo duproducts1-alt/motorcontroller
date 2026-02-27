@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -103,11 +105,12 @@ int main(void)
 
   /* MCU Configuration--------------------------------------------------------*/
 
+
+
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -137,7 +140,7 @@ int main(void)
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
-
+  MC_StartMotor1();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -145,7 +148,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  MC_RunMotorControlTasks();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
