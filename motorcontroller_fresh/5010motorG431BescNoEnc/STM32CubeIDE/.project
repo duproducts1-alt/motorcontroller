@@ -376,4 +376,10 @@
 			<locationURI>PARENT-1-PROJECT_LOC/MCSDK_v6.3.2-Full/MotorControl/MCSDK/MCLib/Any/Src/virtual_speed_sensor.c</locationURI>
 		</link>
 	</linkedResources>
+	<variableList>
+		<variable>
+			<name>SrcFolder</name>
+			<value>file:/C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010motorG431BescNoEnc/Src</value>
+		</variable>
+	</variableList>
 </projectDescription>
