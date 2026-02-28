@@ -196,8 +196,8 @@ all: main-build
 main-build: claudeesc.elf secondary-outputs
 
 # Tool invocations
-claudeesc.elf claudeesc.map: $(OBJS) $(USER_OBJS) C:\Users\Sean\motorcontroller\STM32G431CBUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "claudeesc.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Sean\motorcontroller\STM32G431CBUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="claudeesc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+claudeesc.elf claudeesc.map: $(OBJS) $(USER_OBJS) ../STM32G431CBUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "claudeesc.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"../STM32G431CBUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="claudeesc.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
