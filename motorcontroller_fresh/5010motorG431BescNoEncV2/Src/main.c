@@ -111,17 +111,6 @@ static void MX_NVIC_Init(void);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 int main(void)
 {
   HAL_Init();
@@ -141,33 +130,60 @@ int main(void)
   MX_OPAMP3_Init();
   MX_TIM1_Init();
   MX_USART2_UART_Init();
-  
-  HAL_Delay(1000);
 
-  uint8_t msg1[] = "Starting motor control\r\n";
-  HAL_UART_Transmit(&huart2, msg1, 24, HAL_MAX_DELAY);
-
-  /* Initialize interrupts FIRST */
+  /* Initialize NVIC BEFORE motor control init */
   MX_NVIC_Init();
 
-  uint8_t msg_nvic[] = "NVIC initialized\r\n";
-  HAL_UART_Transmit(&huart2, msg_nvic, 18, HAL_MAX_DELAY);
-
+  /* This reconfigures SysTick - motor control runs in SysTick ISR */
   MX_MotorControl_Init();
 
-  /* DO NOT USE HAL_Delay() or UART after this point - SysTick is reconfigured */
+  char buffer[80];  // DECLARE ONCE HERE
 
-  if (pMCI[0] != NULL) {
-    MCI_StartMotor(pMCI[0]);
-  }
+  /* Debug: Check RevUp controller */
+  sprintf(buffer, "RevUp Ph1 duration: %d ms\r\n",
+          RUC_GetPhaseDurationms(&RevUpControlM1, 0));
+  HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 100);
 
+  sprintf(buffer, "Ph2 duration: %d ms\r\n",
+          RUC_GetPhaseDurationms(&RevUpControlM1, 1));
+  HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 100);
+
+  sprintf(buffer, "Ph2 final speed: %d\r\n",
+          RUC_GetPhaseFinalMecSpeedUnit(&RevUpControlM1, 1));
+  HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 100);
+
+  /* Program the speed BEFORE starting */
+  MC_ProgramSpeedRampMotor1(100, 3000);
+
+  /* Now start the motor */
+  bool result = MC_StartMotor1();
+  sprintf(buffer, "MC_StartMotor1 returned: %d\r\n", result);
+  HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 100);
+
+  /* Loop forever - SysTick interrupt handles everything */
   while(1)
   {
-    /* Just loop - motor is controlled by SysTick interrupt */
-  }
+    MC_RunMotorControlTasks();
 
+    static int count = 0;
+    if (count++ >= 100) {
+      count = 0;
+      MCI_State_t state = MCI_GetSTMState(pMCI[0]);
+      int16_t speed = MC_GetMecSpeedAverageMotor1();
+      uint16_t faults = MC_GetCurrentFaultsMotor1();
+
+      sprintf(buffer, "State: %d, Speed: %d, Faults: 0x%04X\r\n",
+              state, speed, faults);
+      HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), 100);
+    }
+  }
   return 0;
 }
+
+
+
+
+
 
 
 

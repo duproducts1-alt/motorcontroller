@@ -103,8 +103,8 @@
 #define SPEED_LOOP_FREQUENCY_HZ             (uint16_t)1000 /*!<Execution rate of speed regulation loop (Hz) */
 
 /* Speed PID parameter dividers */
-#define SP_KPDIV                            8
-#define SP_KIDIV                            1024
+#define SP_KPDIV                            1024
+#define SP_KIDIV                            16834
 #define SP_KDDIV                            16
 #define SP_KPDIV_LOG                        LOG2((8))
 #define SP_KIDIV_LOG                        LOG2((1024))
@@ -143,7 +143,7 @@
 /******************************   START-UP PARAMETERS   **********************/
 
 /* Phase 1 */
-#define PHASE1_DURATION                     1000 /*milliseconds */
+#define PHASE1_DURATION                     2000 /*milliseconds */
 #define PHASE1_FINAL_SPEED_UNIT             (0*SPEED_UNIT/U_RPM)
 #define PHASE1_FINAL_CURRENT_A              0.5
 
@@ -167,7 +167,7 @@
 #define PHASE5_FINAL_SPEED_UNIT             (1500*SPEED_UNIT/U_RPM)
 #define PHASE5_FINAL_CURRENT_A              0.5
 
-#define ENABLE_SL_ALGO_FROM_PHASE           3
+#define ENABLE_SL_ALGO_FROM_PHASE           99
 
 /* Sensor-less rev-up sequence */
 #define STARTING_ANGLE_DEG                  0  /*!< degrees [0...359] */
