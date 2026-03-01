@@ -18,7 +18,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include <stdio.h>
+#include <string.h>
+#include <stdio.h>
+#include <string.h>
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -142,7 +145,30 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
+#include <stdio.h>
+#include <string.h>
 
+MX_MotorControl_Init();
+MC_StartMotor1();
+HAL_Delay(1000);
+
+// Set zero torque/current so motor is free to rotate by hand
+qd_t zero_current = {0, 0};
+MC_SetCurrentReferenceMotor1(zero_current);
+HAL_Delay(100);
+
+while(1) {
+    char buffer[100];
+    int16_t encoder_angle = MC_GetElAngledppMotor1();
+    uint32_t timer_count = TIM4->CNT;
+    bool sensor_reliable = MC_GetSpeedSensorReliabilityMotor1();
+
+    sprintf(buffer, "POS: %d | TMR: %lu | REL: %d\r\n",
+            encoder_angle, timer_count, sensor_reliable);
+    HAL_UART_Transmit(&huart2, (uint8_t *)buffer, strlen(buffer), 100);
+
+    HAL_Delay(100);
+}
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
