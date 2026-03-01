@@ -732,3 +732,6 @@ Started STM32CubeMX for final c-code generation
 2026-02-28 16:03:30,273 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-02-28 16:03:30,273 [INFO] ApiDbMcu:508 - Load IP Config File for USB_Device
 2026-02-28 16:03:44,723 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-02-28 16:03:44,723 [INFO] ConfigFileManager:2876 - mx.scratch is deleted!
 2026-02-28 16:03:44,723 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-02-28 16:03:44,723 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 14633mS.
+2026-02-28 16:03:46,463 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-02-28 16:03:46,463 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1740mS.
+2026-02-28 16:03:46,849 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-02-28 16:03:46,849 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 384mS.
+2026-02-28 16:03:49,127 DEBUG [IOCDialogController.lambda$onClose$8] IOCGenerationDialog exists with return code 0
