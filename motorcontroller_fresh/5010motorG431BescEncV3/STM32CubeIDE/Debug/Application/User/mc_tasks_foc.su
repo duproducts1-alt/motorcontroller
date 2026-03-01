@@ -1,0 +1,7 @@
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010motorG431BescEncV3/Src/mc_tasks_foc.c:433:13:FOC_Clear	16	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010motorG431BescEncV3/Src/mc_tasks_foc.c:81:13:FOC_Init	32	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010motorG431BescEncV3/Src/mc_tasks_foc.c:156:6:TSK_MF_StopProcessing	8	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010motorG431BescEncV3/Src/mc_tasks_foc.c:469:13:FOC_InitAdditionalMethods	0	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010motorG431BescEncV3/Src/mc_tasks_foc.c:492:13:FOC_CalcCurrRef	24	static,ignoring_inline_asm
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010motorG431BescEncV3/Src/mc_tasks_foc.c:174:13:TSK_MediumFrequencyTaskM1	24	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010motorG431BescEncV3/Src/mc_tasks_foc.c:547:16:FOC_HighFrequencyTask	48	static
