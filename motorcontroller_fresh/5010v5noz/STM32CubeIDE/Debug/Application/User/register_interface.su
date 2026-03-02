@@ -1,0 +1,7 @@
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010v5noz/Src/register_interface.c:32:9:RI_SetRegisterGlobal	4	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010v5noz/Src/register_interface.c:166:9:RI_SetRegisterMotor1	24	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010v5noz/Src/register_interface.c:575:9:RI_GetRegisterGlobal	8	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010v5noz/Src/register_interface.c:720:11:RI_GetRegisterMotor1	80	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010v5noz/Src/register_interface.c:1260:9:RI_MovString	4	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010v5noz/Src/register_interface.c:1286:9:RI_GetIDSize	0	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010v5noz/Src/register_interface.c:1321:16:RI_GetPtrReg	0	static
