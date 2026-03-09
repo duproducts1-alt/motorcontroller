@@ -865,3 +865,12 @@ Started STM32CubeMX for final c-code generation
 2026-03-09 13:20:00,566 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-03-09 13:20:00,566 [INFO] ConfigFileManager:3194 - mx.scratch is deleted!
 2026-03-09 13:20:00,566 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-03-09 13:20:00,566 [INFO] ProjectBuilder:5628 - Time for Generating toolchain IDE Files: 5203mS.
 2026-03-09 13:20:01,225 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-03-09 13:20:01,225 [INFO] ProjectBuilder:3588 - Time for Copy CMSIS : 659mS.
+2026-03-09 13:20:01,876 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-03-09 13:20:01,876 [INFO] ProjectBuilder:3588 - Time for Copy CMSIS : 649mS.
+2026-03-09 13:20:01,889 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-03-09 13:20:01,889 [INFO] MainFileManager:749 - Exiting application...
+2026-03-09 13:20:01,891 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-03-09 13:20:01,891 [INFO] MainFileManager:821 - Proxy status is invalid, do not check for advertisement updates
+2026-03-09 13:20:01,891 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-03-09 13:20:01,891 [INFO] ApplicationProperties:184 - Using Application install path: C:\STM32CubeMX
+2026-03-09 13:20:01,891 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-03-09 13:20:01,891 [INFO] ApplicationProperties:184 - Using Application install path: C:\STM32CubeMX
+2026-03-09 13:20:02,359 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-03-09 13:20:02,358 [INFO] WebApp:179 - JxBrowser engine has been closed 
+2026-03-09 13:20:02,359 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2026-03-09 13:20:02,359 [INFO] WebApp:330 - Close the Jxbrowser engine manually
+2026-03-09 13:20:05,327 DEBUG [IOCDialogController.lambda$onClose$8] IOCGenerationDialog exists with return code 0
+2026-03-09 13:20:05,347 INFO  [Ioc.lambda$loadFile$1] WB6 API: successfully parsed iocFile: C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/5010_7pole_allnewcanv3.iocto json 
