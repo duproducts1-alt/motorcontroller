@@ -1,0 +1,7 @@
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/mc_tasks_foc.c:444:13:FOC_Clear	16	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/mc_tasks_foc.c:79:13:FOC_Init	32	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/mc_tasks_foc.c:161:6:TSK_MF_StopProcessing	8	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/mc_tasks_foc.c:487:13:FOC_InitAdditionalMethods	0	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/mc_tasks_foc.c:518:13:FOC_CalcCurrRef	40	static,ignoring_inline_asm
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/mc_tasks_foc.c:180:13:TSK_MediumFrequencyTaskM1	24	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/mc_tasks_foc.c:581:16:FOC_HighFrequencyTask	56	static

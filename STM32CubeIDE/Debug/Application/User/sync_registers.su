@@ -1,0 +1,5 @@
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/sync_registers.c:33:9:RI_SetRegisterGlobal	4	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/sync_registers.c:167:9:RI_SetRegisterMotor1	24	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/sync_registers.c:603:9:RI_GetRegisterGlobal	8	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/sync_registers.c:748:11:RI_GetRegisterMotor1	96	static
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/sync_registers.c:1331:9:RI_MovString	4	static

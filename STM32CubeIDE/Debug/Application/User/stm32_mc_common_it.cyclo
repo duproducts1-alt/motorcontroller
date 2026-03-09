@@ -1,0 +1,6 @@
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/stm32_mc_common_it.c:70:6:TIM4_IRQHandler	3
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/stm32_mc_common_it.c:109:6:USART2_IRQHandler	14
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/stm32_mc_common_it.c:187:6:HardFault_Handler	1
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/stm32_mc_common_it.c:206:6:SysTick_Handler	3
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/stm32_mc_common_it.c:254:6:EXTI15_10_IRQHandler	2
+C:/Users/Sean/motorcontroller/motorcontroller_fresh/5010_7pole_allnewcanv3/Src/stm32_mc_common_it.c:273:6:EXTI9_5_IRQHandler	2
